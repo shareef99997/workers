@@ -152,27 +152,45 @@ class _employeesState extends State<workers> {
                                 expandIcon: Icon(Icons.arrow_drop_down).icon,
                                 collapseIcon: Icon(Icons.arrow_drop_up).icon,
                               ),
-                              expanded: Row(
+                              expanded: SingleChildScrollView(
+
+                                child:Row(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
-                                  SizedBox(width: 65,),
+                                  SizedBox(width: 50,),
 
                                   Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       SizedBox(height: 10,),
-                                      Text('Position : ${_foundusers[index]['emp_cd']}', style: TextStyle(fontSize: 15)),
+                                      Row(children: [
+                                        Text('id ', style: TextStyle(fontSize: 13,color: const Color.fromARGB(135, 0, 0, 0))),
+                                        Text(': ${_foundusers[index]['emp_cd']}', style: TextStyle(fontSize: 13)),
+                                      ],),
+                                      
                                       SizedBox(height: 5,),
-                                      Text('Phone number : ${_foundusers[index]['mobile_no']}', style: TextStyle(fontSize: 15)),
+                                      Row(children: [
+                                        Text('Phone number ', style: TextStyle(fontSize: 13,color: const Color.fromARGB(135, 0, 0, 0))),
+                                        Text(': ${_foundusers[index]['mobile_no']}', style: TextStyle(fontSize: 13)),
+                                      ],),
+                                      
                                       SizedBox(height: 5,),
-                                      Text('Birth Date : ${_foundusers[index]['birth_dt']}', style: TextStyle(fontSize: 15)),
+                                      Row(children: [
+                                        Text('Birth Date ', style: TextStyle(fontSize: 13,color: const Color.fromARGB(135, 0, 0, 0))),
+                                        Text(': ${_foundusers[index]['birth_dt']}', style: TextStyle(fontSize: 13)),
+                                      ],),
+                                      
                                       SizedBox(height: 5,),
-                                      Text('comp_id : ${_foundusers[index]['id']}', style: TextStyle(fontSize: 15)),
+                                      Row(children: [
+                                        Text('comp_id ', style: TextStyle(fontSize: 13,color: Color.fromARGB(135, 0, 0, 0)) ),
+                                        Text(': ${_foundusers[index]['id']}', style: TextStyle(fontSize: 13)),
+
+                                      ],),
                                     ],
                                   ),
                                 ],
-                              ) 
-
+                              ) ,
+                              )  
                             ),
                         ) ),
                       ),

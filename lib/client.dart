@@ -5,7 +5,7 @@ var postapiurl ='http://88.85.248.3:5002/Employee/Postemployee';
 var getapiurl = 'http://88.85.248.3:5002/Employee/Getemployee';
 
 
-Future<dynamic> post(String id,String name,String position ,String phone,String birth) async {
+Future<dynamic> post(String id,String name,String emp_id ,String phone,String birth) async {
   try {
     var result ='';
 
@@ -16,7 +16,7 @@ Future<dynamic> post(String id,String name,String position ,String phone,String 
         
       },
       body: jsonEncode(<String, String>{
-          "emp_cd": position,
+          "emp_cd": emp_id,
           "fullname": name,
           "birth_dt": birth,
           "mobile_no": phone,

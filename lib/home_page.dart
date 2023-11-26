@@ -48,12 +48,12 @@ class _HomePageState extends State<HomePage> {
                   focusedBorder: UnderlineInputBorder(
                   borderSide: BorderSide(color: Colors.black),
                 ),
-                  labelText: 'User ID',
+                  labelText: 'Company ID',
                 ),
                 
                 validator: (value) {
                   if (value != null && value.isEmpty) {
-                    return 'Please enter your user ID';
+                    return 'Please enter your Company Id';
                   }
                   return null;
                 },
@@ -81,7 +81,7 @@ class _HomePageState extends State<HomePage> {
                   focusedBorder: UnderlineInputBorder(
                   borderSide: BorderSide(color: Colors.black),
                 ),
-                  labelText: 'Profession',
+                  labelText: 'Employee CD',
                 ),
                 validator: (value) {
                   if (value != null && value.isEmpty) {
@@ -100,8 +100,8 @@ class _HomePageState extends State<HomePage> {
                   labelText: 'Phone Number',
                 ),
                 validator: (value) {
-                  if (value != null && value.isEmpty) {
-                    return 'Please enter your Phone Number';
+                  if (value != null && !RegExp(r'^05\d{8}$').hasMatch(value)) {
+                    return 'Please enter a valid phone number';
                   }
                   return null;
                 },
